@@ -40,12 +40,12 @@ Below a sample of this data frame (`b <- sample(c(1:208), size = 9, replace = FA
 
 |    |     V1|     V2|     V3|     V4|     V5|     V6|     V7|     V8|     V9|    V10|
 |:---|------:|------:|------:|------:|------:|------:|------:|------:|------:|------:|
-|29  | 0.0100| 0.0275| 0.0190| 0.0371| 0.0416| 0.0201| 0.0314| 0.0651| 0.1896| 0.2668|
-|13  | 0.0079| 0.0086| 0.0055| 0.0250| 0.0344| 0.0546| 0.0528| 0.0958| 0.1009| 0.1240|
-|196 | 0.0129| 0.0141| 0.0309| 0.0375| 0.0767| 0.0787| 0.0662| 0.1108| 0.1777| 0.2245|
-|197 | 0.0050| 0.0017| 0.0270| 0.0450| 0.0958| 0.0830| 0.0879| 0.1220| 0.1977| 0.2282|
-|7   | 0.0317| 0.0956| 0.1321| 0.1408| 0.1674| 0.1710| 0.0731| 0.1401| 0.2083| 0.3513|
-|164 | 0.0072| 0.0027| 0.0089| 0.0061| 0.0420| 0.0865| 0.1182| 0.0999| 0.1976| 0.2318|
+|17  | 0.0352| 0.0116| 0.0191| 0.0469| 0.0737| 0.1185| 0.1683| 0.1541| 0.1466| 0.2912|
+|101 | 0.0629| 0.1065| 0.1526| 0.1229| 0.1437| 0.1190| 0.0884| 0.0907| 0.2107| 0.3597|
+|138 | 0.0430| 0.0902| 0.0833| 0.0813| 0.0165| 0.0277| 0.0569| 0.2057| 0.3887| 0.7106|
+|166 | 0.0221| 0.0065| 0.0164| 0.0487| 0.0519| 0.0849| 0.0812| 0.1833| 0.2228| 0.1810|
+|113 | 0.0454| 0.0472| 0.0697| 0.1021| 0.1397| 0.1493| 0.1487| 0.0771| 0.1171| 0.1675|
+|130 | 0.1371| 0.1226| 0.1385| 0.1484| 0.1776| 0.1428| 0.1773| 0.2161| 0.1630| 0.2067|
 
 ```
 ## [1] "kable(head(Sonar[h, 52:61]), format = 'markdown')"
@@ -55,12 +55,12 @@ Below a sample of this data frame (`b <- sample(c(1:208), size = 9, replace = FA
 
 |    |    V52|    V53|    V54|    V55|    V56|    V57|    V58|    V59|    V60|Class |
 |:---|------:|------:|------:|------:|------:|------:|------:|------:|------:|:-----|
-|29  | 0.0088| 0.0104| 0.0036| 0.0088| 0.0047| 0.0117| 0.0020| 0.0091| 0.0058|R     |
-|13  | 0.0176| 0.0127| 0.0088| 0.0098| 0.0019| 0.0059| 0.0058| 0.0059| 0.0032|R     |
-|196 | 0.0124| 0.0093| 0.0072| 0.0019| 0.0027| 0.0054| 0.0017| 0.0024| 0.0029|M     |
-|197 | 0.0165| 0.0056| 0.0010| 0.0027| 0.0062| 0.0024| 0.0063| 0.0017| 0.0028|M     |
-|7   | 0.0201| 0.0248| 0.0131| 0.0070| 0.0138| 0.0092| 0.0143| 0.0036| 0.0103|R     |
-|164 | 0.0078| 0.0071| 0.0081| 0.0034| 0.0064| 0.0037| 0.0036| 0.0012| 0.0037|M     |
+|17  | 0.0346| 0.0158| 0.0154| 0.0109| 0.0048| 0.0095| 0.0015| 0.0073| 0.0067|R     |
+|101 | 0.0089| 0.0262| 0.0108| 0.0138| 0.0187| 0.0230| 0.0057| 0.0113| 0.0131|M     |
+|138 | 0.0176| 0.0197| 0.0210| 0.0141| 0.0049| 0.0027| 0.0162| 0.0059| 0.0021|M     |
+|166 | 0.0089| 0.0051| 0.0015| 0.0075| 0.0058| 0.0016| 0.0070| 0.0074| 0.0038|M     |
+|113 | 0.0120| 0.0042| 0.0238| 0.0129| 0.0084| 0.0218| 0.0321| 0.0154| 0.0053|M     |
+|130 | 0.0118| 0.0129| 0.0344| 0.0065| 0.0067| 0.0022| 0.0079| 0.0146| 0.0051|M     |
 
 
 ## Physical base
@@ -83,11 +83,11 @@ From reference [**1**]
 
 The data used for the network experiments were sonar returns collected from a metal cylinder and a cylindrically shaped rock positioned on a sandy ocean floor. Both targets were approximately 5 ft in length and the impinging pulse was a wide-band linear FM [chirp](https://en.wikipedia.org/wiki/Chirp) (ka = 55.6). Returns were collected at a range of 10 meters and obtained from the cylinder at aspect angles spanning 90 � and from the rock at aspect angles spanning 180 �.
 
-<p align="center">![Network aequitecture and typical signal](figures/PhysicsSchemw.png)</p>
+<p align="center">![Network aequitecture and typical signal](Figures/PhysicsSchemw.png)</p>
 
 A set of 208 returns (111 cylinder returns and 97 rock returns) were selected from a total set of 1200 returns on the basis of the strength of the specular return (4.0 to 15.0 dB signal-to-noise ratio). An average of 5 returns were selected from each aspect angle. Figure 2 shows a sample return from the rock and the cylinder. The preprocessing of the raw signal was based on experiments with human listeners (Gorman & Sawatari, 1987). The temporal signal was first filtered and spectral information was extracted and used to represent the signal on the input layer.
 
-<p align="center">![Sonar signal](figures/SonarSignal.png)</p>
+<p align="center">![Sonar signal](Figures/SonarSignal.png)</p>
 
 The preprocessing used to obtain the spectral envelope is indicated schematically in Figure 3 where a set of sampling apertures (Figure 3a) are superimposed over the 2D display of a [short-term Fourier Transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) spectrogram of the sonar return. As shown in Figure 3b and c, the spectral envelope, P,0,v0(~), was obtained by integrating over each aperture. The spectral envelope was composed of 60 spectral samples, normalized to take on values between 0.0 and 1.0. (See Gorman & Sejnowski, 1987 for a detailed treatment of the preprocessing).
 
