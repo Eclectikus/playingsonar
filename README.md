@@ -21,22 +21,21 @@ A bit of gymnastics in [RStudio](https://www.rstudio.com/), [R Markdown](http://
 **mlbench**: Machine Learning Benchmark Problems -[CRAN](https://cran.r-project.org/web/packages/mlbench/index.html)- A collection of artificial and real-world machine learning benchmark problems, including, e.g., several data sets from the UCI repository.
 
 Usage (remember install library first: `install.packages("mlbench")`)
-```
+
+``` r
 library(mlbench)
 data("Sonar")
 ```
+
 Format:
 
 > A data frame with 208 observations on 61 variables, all numerical and one (the Class) nominal.
 
 Below a sample of this data frame (`b <- sample(c(1:208), size = 9, replace = FALSE, prob = NULL)`)
 
-
-```
+``` r
 ## [1] "kable(head(Sonar[b, 1:10]), format = 'markdown')"
 ```
-
-
 
 |    |     V1|     V2|     V3|     V4|     V5|     V6|     V7|     V8|     V9|    V10|
 |:---|------:|------:|------:|------:|------:|------:|------:|------:|------:|------:|
@@ -47,7 +46,7 @@ Below a sample of this data frame (`b <- sample(c(1:208), size = 9, replace = FA
 |134 | 0.0790| 0.0707| 0.0352| 0.1660| 0.1330| 0.0226| 0.0771| 0.2678| 0.5664| 0.6609|
 |196 | 0.0129| 0.0141| 0.0309| 0.0375| 0.0767| 0.0787| 0.0662| 0.1108| 0.1777| 0.2245|
 
-```
+``` r
 ## [1] "kable(head(Sonar[h, 52:61]), format = 'markdown')"
 ```
 
@@ -61,7 +60,6 @@ Below a sample of this data frame (`b <- sample(c(1:208), size = 9, replace = FA
 |172 | 0.0123| 0.0060| 0.0187| 0.0111| 0.0126| 0.0081| 0.0155| 0.0160| 0.0085|M     |
 |134 | 0.0298| 0.0390| 0.0294| 0.0175| 0.0249| 0.0141| 0.0073| 0.0025| 0.0101|M     |
 |196 | 0.0124| 0.0093| 0.0072| 0.0019| 0.0027| 0.0054| 0.0017| 0.0024| 0.0029|M     |
-
 
 ## Physical base
 
@@ -83,18 +81,17 @@ From reference [**1**]
 
 The data used for the network experiments were sonar returns collected from a metal cylinder and a cylindrically shaped rock positioned on a sandy ocean floor. Both targets were approximately 5 ft in length and the impinging pulse was a wide-band linear FM [chirp](https://en.wikipedia.org/wiki/Chirp) (ka = 55.6). Returns were collected at a range of 10 meters and obtained from the cylinder at aspect angles spanning 90 � and from the rock at aspect angles spanning 180 �.
 
-<p align="center">![Network aequitecture and typical signal](https://raw.githubusercontent.com/Eclectikus/playingsonar/master/Figures/PhysicsSchemw.png)</p>
+![Network aequitecture and typical signal](https://raw.githubusercontent.com/Eclectikus/playingsonar/master/Figures/PhysicsSchemw.png)
 
 A set of 208 returns (111 cylinder returns and 97 rock returns) were selected from a total set of 1200 returns on the basis of the strength of the specular return (4.0 to 15.0 dB signal-to-noise ratio). An average of 5 returns were selected from each aspect angle. Figure 2 shows a sample return from the rock and the cylinder. The preprocessing of the raw signal was based on experiments with human listeners (Gorman & Sawatari, 1987). The temporal signal was first filtered and spectral information was extracted and used to represent the signal on the input layer.
 
-<p align="center">![Sonar signal](https://raw.githubusercontent.com/Eclectikus/playingsonar/master/Figures/SonarSignal.png)</p>
+![Sonar signal](https://raw.githubusercontent.com/Eclectikus/playingsonar/master/Figures/SonarSignal.png)
 
 The preprocessing used to obtain the spectral envelope is indicated schematically in Figure 3 where a set of sampling apertures (Figure 3a) are superimposed over the 2D display of a [short-term Fourier Transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform) spectrogram of the sonar return. As shown in Figure 3b and c, the spectral envelope, P,0,v0(~), was obtained by integrating over each aperture. The spectral envelope was composed of 60 spectral samples, normalized to take on values between 0.0 and 1.0. (See Gorman & Sejnowski, 1987 for a detailed treatment of the preprocessing).
 
 ## Exploratory amusements
 
 After loading libraries and data,
-
 
 ```r
 ## Libraries&data
@@ -108,7 +105,6 @@ After loading libraries and data,
 
 and creating training and testing sets,
 
-
 ```r
 ## Train&test
   set.seed(107)
@@ -119,9 +115,8 @@ and creating training and testing sets,
 
 I made a quick approach to data by running a few graphical routines on previous, arbitrary, training set. 
 
-
 ```r
-# 
+
 for(i in names(training)){   # loop columns
   a <- ggplot(data = training, aes(training[,i],y = Class, coord_fixed(),
                                    col = Class))
@@ -146,7 +141,6 @@ print(a)
 ![*Signal by spectral sample and "outcome" (mine or rock)*](https://raw.githubusercontent.com/Eclectikus/playingsonar/master/Figures/Sonar1_1200xVia_ezgif.com.gif)
 
 And also,
-
 
 ```r
 for (j in 1:157) {  # loop observations
