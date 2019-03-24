@@ -10,7 +10,7 @@ output:
       code_folding: hide
       keep_md: true
 ---
-# Playing with Sonar {mlbench}
+ Playing with Sonar {mlbench}
 
 A bit of gymnastics in [RStudio](https://www.rstudio.com/), [R Markdown](http://rmarkdown.rstudio.com/) and [knitr](https://cran.r-project.org/web/packages/knitr/index.html).
 
