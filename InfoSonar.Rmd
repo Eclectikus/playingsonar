@@ -1,6 +1,6 @@
 ---
 title: "Sonar Info"
-author: "Joanh"
+author: "Eclectikus"
 date: "2016"
 output:
     html_document:
@@ -61,7 +61,7 @@ The label associated with each record contains the letter "R" if the object is a
 ### Sonar data and signal representation
 From reference [**1**]
 
-The data used for the network experiments were sonar returns collected from a metal cylinder and a cylindrically shaped rock positioned on a sandy ocean floor. Both targets were approximately 5 ft in length and the impinging pulse was a wide-band linear FM [chirp](https://en.wikipedia.org/wiki/Chirp) (ka = 55.6). Returns were collected at a range of 10 meters and obtained from the cylinder at aspect angles spanning 90 ° and from the rock at aspect angles spanning 180 °.
+The data used for the network experiments were sonar returns collected from a metal cylinder and a cylindrically shaped rock positioned on a sandy ocean floor. Both targets were approximately 5 ft in length and the impinging pulse was a wide-band linear FM [chirp](https://en.wikipedia.org/wiki/Chirp) (ka = 55.6). Returns were collected at a range of 10 meters and obtained from the cylinder at aspect angles spanning 90 ï¿½ and from the rock at aspect angles spanning 180 ï¿½.
 
 <p align="center">![Network aequitecture and typical signal](figures/PhysicsSchemw.png)</p>
 
