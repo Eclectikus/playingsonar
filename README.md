@@ -10,7 +10,10 @@ output:
       code_folding: hide
       keep_md: true
 ---
- Playing with Sonar {mlbench}
+
+# Playing with Sonar {mlbench}
+
+[![Estado](https://img.shields.io/badge/Status-For%20reference-lightgrey.svg?style=for-the-badge&logo=appveyor)](https://github.com/Eclectikus/playingsonar)
 
 A bit of gymnastics in [RStudio](https://www.rstudio.com/), [R Markdown](http://rmarkdown.rstudio.com/) and [knitr](https://cran.r-project.org/web/packages/knitr/index.html).
 
@@ -182,4 +185,4 @@ for (j in 1:157) {  # loop observations
 
 ![*Signal by return and "outcome" (mine or rock)*](https://github.com/Eclectikus/playingsonar/blob/master/Figures/Sonar2_1200xVia_ezgif.com.gif?raw=true)
 
-[I tried first to do the above animations directly from R by using package `animation` (from the same author as `knitre`), but got nothing, surely I need more time. [Its Github](https://github.com/yihui/animation) and [Its site](http://yihui.name/animation/) are sure the starting points. After that I tried [Gimp](https://www.gimp.org/) but the poor quality made me desist. So finally I happily used [ezgif.com](http://ezgif.com/)]
+[I tried first to do the above animations directly from R by using package `animation` (from the same author as `knitre`), but got nothing, surely I need more time. [Its Github](https://github.com/yihui/animation) and [its site](http://yihui.name/animation/) are sure the starting points. After that I tried [Gimp](https://www.gimp.org/) but the poor quality made me desist. So finally I happily used [ezgif.com](http://ezgif.com/)]
